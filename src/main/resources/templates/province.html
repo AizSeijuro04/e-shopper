@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Province</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h2> List Province </h2>
+    <table>
+        <thead>
+            <tr>Province ID</tr>
+            <tr>Province Name</tr>
+        </thead>
+        <tbody>
+            <tr th:each="prov: ${listOfProvince}">
+                <td th:text="${prov.provId}"></td>
+                <td th:text="${prov.provName}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
