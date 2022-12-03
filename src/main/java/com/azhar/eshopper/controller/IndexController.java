@@ -13,8 +13,9 @@ import com.azhar.eshopper.model.Province;
 public class IndexController {
     @GetMapping("/")
     public String showIndex(Model model){
+        model.addAttribute("isHome", true);
         model.addAttribute("title", "Hello Baby 2022");
-        return "index.html";
+        return "index";
     }
 
     @GetMapping("/province")
